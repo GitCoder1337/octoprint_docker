@@ -8,8 +8,7 @@ services:
     restart: unless-stopped
     ports:
       - 80:80
-    # find usb devices with cmd 'ls /dev | grep -i "usb"'
     devices:
-      - /dev/ttyUSB0 
+      - /dev/ttyUSB0 # ls /dev | grep -i "usb"
     volumes:
       - octoprint-docker:/home/octoprint/.octoprint
